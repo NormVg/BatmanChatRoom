@@ -3,7 +3,7 @@ import tinydb
 from mycypher import encrypt
 import time
 import uuid 
-from flask_cors import CORS
+# from flask_cors import CORS
 
 
 db = tinydb.TinyDB("./db/db.json")
@@ -11,7 +11,7 @@ db = tinydb.TinyDB("./db/db.json")
 chatroom =  []
 users = tinydb.Query()
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 @app.route("/",methods=['GET','POST'])
 def login():
