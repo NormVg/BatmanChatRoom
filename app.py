@@ -41,7 +41,7 @@ def chat():
     token = int(request.args.get("token")) + 150
     print("AUTH KEY", key,"TOKEN", token)
     Auth_Token = int(time.time())
-    if token >= Auth_Token or token:
+    if token >= Auth_Token :
         print("TOKEN ACCEPTED")
         return render_template("chatroom.html")
     else: 
