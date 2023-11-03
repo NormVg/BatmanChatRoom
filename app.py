@@ -38,7 +38,7 @@ def login():
 def chat():
     key = request.args.get("auth-key")
     uname = request.args.get("user")
-    token = int(request.args.get("token")) + 10
+    token = int(request.args.get("token")) + 150
     print("AUTH KEY", key,"TOKEN", token)
     Auth_Token = int(time.time())
     if token >= Auth_Token or token:
