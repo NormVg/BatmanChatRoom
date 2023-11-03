@@ -9,20 +9,12 @@
 </head>
 <body>
     <section id="msgs" class="pl-3">
-
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
-
+    <div id="msgs-box-main">
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>    
+    </div>
     
+        <div  class="blink" style="font-size:x-large;font-weight: bold">_</div>
 </section>
-<div  class="blink" style="font-size:x-large;font-weight: bold">_</div>
     <div class="flex justify-left flex-row">
         
         <form id="msg-form" class="flex justify-center items-center">
@@ -34,17 +26,12 @@
 
 
     <script>
-        let chat_form = document.getElementById("msg-form")
-        chat_form.addEventListener("submit", (e) => {
-            e.preventDefault();
-          
-            let input_Msg = document.getElementById("input-msg");
-            console.log(input_Msg.value)
-            input_Msg.value = ""
-          
-        
-          });
+
+    </script>
+    <script>
+        document.scrollingElement.scroll(0,1)
     </script>
     <script src="static/typer.js"></script>
+    <script src="static/chat.js"></script>
 </body>
 </html>

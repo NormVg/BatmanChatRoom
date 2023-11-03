@@ -35,7 +35,7 @@ body{
 
 .blink{
     animation-name: blink;
-    animation-duration: 500ms;
+    animation-duration: 600ms;
     animation-iteration-count: infinite;
 }
 
@@ -58,7 +58,7 @@ body{
     height: 80vh;
 
     overflow-x: hidden;
-    overflow-anchor: auto;
+    /* overflow-anchor: auto; */
 }
 
 /*  THIS THE SCROLL-BARR */

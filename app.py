@@ -2,13 +2,16 @@ from flask import Flask , render_template , request , jsonify ,redirect
 import tinydb 
 from mycypher import encrypt
 import time
-
+import uuid 
+from flask_cors import CORS
 
 
 db = tinydb.TinyDB("./db/db.json")
+
 chatroom =  []
 users = tinydb.Query()
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/",methods=['GET','POST'])
 def login():
@@ -48,11 +51,37 @@ def chat():
 
 @app.get("/api/room-updates")
 def room_updates():
-    return "200"
+    msg_id = request.args.get("id")
+    try :
+        latestmsg =jsonify({"messages":[chatroom[-1]]}) 
+    except:
+        latestmsg =jsonify({"messages":[]}) 
+    if msg_id == "new-client-200":
 
-@app.get("/api/send-msg")
+        return latestmsg
+    else:
+        for i,k in enumerate(chatroom):
+            if k['id'] == msg_id:             
+                data = chatroom.copy()
+                data = data[i+1:]
+                print(data)
+                return jsonify({"messages":data})
+        return latestmsg
+
+@app.post("/api/send-msg")
 def send_msg():
-    return "200"
+    reply = request.get_json()
+    id = uuid.uuid4()
+    data = {"user":reply['user'], "msg":reply['msg'],"id":str(id.int)}
+    if len(chatroom)> 40:
+        try: 
+            chatroom.remove(chatroom[0])
+        except:
+            pass
+    chatroom.append(data)
+    
+
+    return jsonify({"status":200})
 
 @app.get("/admin")
 def admin():

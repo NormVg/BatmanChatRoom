@@ -4,8 +4,8 @@ db =  TinyDB("./db/db.json")
 
 person = tinydb.Query()
 
-db.insert({'username': 'MrPixel', 'password': "12f0a4ba22f08d7499fc7def1c98c680ac2c99c67fc7ba2cbcc5ec2f6a8c6a16"})
-# db.insert({'username': 'vishnu_gupta_vg', 'password': "ab6b786aa204199a39492078eab36895cfa6b650d969c79f85a0055d461a0c52"})
+db.insert({'username': 'tippo', 'password': "32a912105fd4928bfd348b38ccc7ab3123c228d2e27e3e5e5ef5442db5286310"})
+db.insert({'username': 'vishnu', 'password': "7fe017a59440c783fabc539c5697ab9b7fce16deb0865826ab6bcf25e22bbce5"})
 print(db.all())
 
 # [
