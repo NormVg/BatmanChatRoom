@@ -7,7 +7,12 @@ body{
     align-items: center;
     height: 100vh;
     color: whitesmoke;
+    font-family: 'VT323', monospace;
     
+}
+
+.red-my{
+    color: #FF5555;
 }
 
 div{
@@ -27,6 +32,7 @@ label,button{
 input{
     padding-left: 10px;
     color: black;
+    border: 10px;
 }
 
 #sub{
@@ -37,4 +43,7 @@ input{
    padding-bottom: 5px;
    border-radius: 5px;
 
+}
+.msg-inp{
+    border-radius: 5px;
 }

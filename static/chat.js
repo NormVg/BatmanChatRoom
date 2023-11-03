@@ -1,11 +1,11 @@
 var lastchat =  "new-client-200";
 const searchParams = new URLSearchParams(window.location.search);
 var user_name = searchParams.get('user')
-const chatContainer = document.getElementById('msgs-box-main');
+
 
 
 function update_chat_room() {
-    const apiUrl = 'https://batmanchatroom.onrender.com/api/room-updates?id='+lastchat;
+    const apiUrl = '/api/room-updates?id='+lastchat;
 
     fetch(apiUrl)
       .then(response => {
@@ -41,7 +41,8 @@ function update_chat_room() {
         
             document.getElementById("msgs-box-main").appendChild(msg_ele)
 
-            scrollToBottom();
+            var objDiv = document.getElementById("msgs");
+            objDiv.scrollTop = objDiv.scrollHeight;
           });
 
       })
@@ -54,15 +55,13 @@ function update_chat_room() {
 
 
 
-function scrollToBottom() {
-  chatContainer.scrollTop = chatContainer.scrollHeight;
-}
+
 
 
 function message_send(text,user) {
   console.log(text,user);
 
-  const apiUrl = "https://batmanchatroom.onrender.com/api/send-msg";
+  const apiUrl = "/api/send-msg";
 
   const postData = {
     "user":user,
