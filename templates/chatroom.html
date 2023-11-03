@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/chat.css">
+    <link rel="stylesheet" href="static/tailwind.min.css">
+    <title>ChatRoom</title>
+</head>
+<body>
+    <section id="msgs" class="pl-3">
+
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+        <div class="msg-box">? <span id="msg-user" class="msg-user">NormVg</span>  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis velit </div>
+
+    
+</section>
+<div  class="blink" style="font-size:x-large;font-weight: bold">_</div>
+    <div class="flex justify-left flex-row">
+        
+        <form id="msg-form" class="flex justify-center items-center">
+            <div id="blink-q" class="blink">?</div>
+            <input type="text" id="input-msg" required>
+            <button id="btn-msg" type="submit">send</button>
+        </form>
+    </div>
+
+
+    <script>
+        let chat_form = document.getElementById("msg-form")
+        chat_form.addEventListener("submit", (e) => {
+            e.preventDefault();
+          
+            let input_Msg = document.getElementById("input-msg");
+            console.log(input_Msg.value)
+            input_Msg.value = ""
+          
+        
+          });
+    </script>
+    <script src="static/typer.js"></script>
+</body>
+</html>
