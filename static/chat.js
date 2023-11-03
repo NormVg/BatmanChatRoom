@@ -5,7 +5,7 @@ const chatContainer = document.getElementById('msgs-box-main');
 
 
 function update_chat_room() {
-    const apiUrl = 'http://localhost:5000/api/room-updates?id='+lastchat;
+    const apiUrl = 'https://batmanchatroom.onrender.com/api/room-updates?id='+lastchat;
 
     fetch(apiUrl)
       .then(response => {
@@ -21,7 +21,7 @@ function update_chat_room() {
         console.log(data);
         lastchat = data["messages"][data['messages'].length - 1 ]['id']
         // console.log(lastchat)
-        element = `<div class="msg-box">? <span id="msg-user" class="msg-user">`+ "" +`</span> > ` + "" + ` </div>`
+        // element = `<div class="msg-box">? <span id="msg-user" class="msg-user">`+ "" +`</span> > ` + "" + ` </div>`
          
 
 
@@ -62,7 +62,7 @@ function scrollToBottom() {
 function message_send(text,user) {
   console.log(text,user);
 
-  const apiUrl = "http://localhost:5000/api/send-msg";
+  const apiUrl = "https://batmanchatroom.onrender.com/api/send-msg";
 
   const postData = {
     "user":user,
